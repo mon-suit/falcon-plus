@@ -65,4 +65,8 @@ func Routes(r *gin.Engine) {
 	//maintain
 	hostr.POST("/host/maintain", SetMaintain)
 	hostr.DELETE("/host/maintain", UnsetMaintain)
+
+	//find
+	hostr.POST("/host/find_by_strategy", FindByMetric)
+	hostr.GET("/hosts/maintain", FindByMaintain)
 }
